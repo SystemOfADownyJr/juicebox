@@ -44,14 +44,15 @@ async function updateUser(id, fields = {}) {
 
 async function getAllUsers() {
   try {
-  const { rows } = await client.query(
-    `SELECT id, username, name, location, active
-    FROM usertable;
-    `);
+    const { rows } = await client.query(
+        `SELECT id, username, name, location, active
+        FROM usertable;
+        `);
 
-  return rows;
-} catch (error) {
-  throw error;
+        return rows;
+    } catch (error) {
+        throw error;
+    }
 }
 
 async function getUserById(userId) {
@@ -75,17 +76,8 @@ async function getUserById(userId) {
 }
 
 
-
-
-
-
-
-
-
-
-
 module.exports = {  
   client,
   createUser,
   getAllUsers
-}}
+}

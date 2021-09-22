@@ -44,9 +44,9 @@ async function createInitialUsers() {
   try {
     console.log("Starting to create users...");
 
-    await createUser({ username: 'albert', password: 'bertie99' });
-    await createUser({ username: 'sandra', password: '2sandy4me' });
-    await createUser({ username: 'glamgal', password: 'soglam' });
+    await createUser({ username: 'albert', password: 'bertie99', name: 'bob', location: 'somewhere' });
+    await createUser({ username: 'sandra', password: '2sandy4me', name: 'bob', location: 'somewhere' });
+    await createUser({ username: 'glamgal', password: 'soglam', name: 'bob', location: 'somewhere' });
 
     console.log("Finished creating users!");
   } catch(error) {
